@@ -39,6 +39,73 @@
                                LUNA
                                (rotate 180 NAVE)))
 
-ESPACIO-PUNTO2 ESPACIO-PUNTO3 ESPACIO-PUNTO4
-ESPACIO-PUNTO5 ESPACIO-PUNTO6 ESPACIO-PUNTO7
+;1b)
+(define (ubicar-a-derecha nave luna )
+  (beside
+   (rotate 180 nave)
+    luna))
+
+(ubicar-a-derecha NAVE LUNA)
+
+
+(define (debajo nave luna )
+  (above LUNA
+         (rotate 180 nave)))
+
+(debajo NAVE LUNA)
+
+
+
+(define (entre-lunas nave luna )
+  (beside luna
+   (rotate 180 nave)
+     luna))
+
+(entre-lunas NAVE LUNA)
+
+
+
+(define (tres-figuras-apiladas nave luna)
+  (above (rotate 180 nave)
+    (rectangle 10 10 "solid" "white")
+    (rotate 180 nave)
+    (rectangle 10 10 "solid" "white")
+    (rotate 180 nave)
+     luna))
+
+(tres-figuras-apiladas NAVE LUNA)
+
+(define (por-encima nave luna)
+  (above (rotate 180 nave)
+    (rectangle 10 10 "solid" "white")
+    luna))
+
+(por-encima NAVE LUNA)
+
+(define (frente-a-la-luna nave luna)
+  (overlay (rotate 180 nave)
+                       luna))
+
+(frente-a-la-luna NAVE LUNA)
+
+(define (alunizar-left-rigth nave luna)
+  (beside
+   (rotate 90 nave)
+    luna
+     (rotate 90 nave)))
+
+(alunizar-left-rigth NAVE LUNA)
+
+
+(define (alunizar-top-bottom nave luna)
+  (above (rotate 180 nave)
+    luna
+     (rotate 180 nave)))
+
+(alunizar-top-bottom NAVE LUNA)
+
+;ESPACIO-PUNTO2 ESPACIO-PUNTO3 ESPACIO-PUNTO4
+;ESPACIO-PUNTO5 ESPACIO-PUNTO6 ESPACIO-PUNTO7
+
+;TERMINAR EL PUNTO 1.9A Y 1.9B
 
